@@ -50,13 +50,7 @@ class Home extends StatelessWidget {
               color: Colors.red,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15.0, top: 10.0),
-            child: Text(
-              "Categories",
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
+
           //Create a single child scroll view of a row of categories
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -75,10 +69,31 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-          Text(
-            "Popular",
-            style: TextStyle(),
-          )
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0, top: 10, right: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Popular",
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                TextButton(onPressed: () {}, child: Text("See All")),
+              ],
+            ),
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.25,
+            //get the width of the screen
+            width: MediaQuery.of(context).size.width * 0.9,
+            margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(32),
+              color: Colors.red,
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: CurvedNavigationBar(

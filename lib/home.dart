@@ -75,6 +75,10 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
+          Text(
+            "Popular",
+            style: TextStyle(),
+          )
         ],
       ),
       bottomNavigationBar: CurvedNavigationBar(

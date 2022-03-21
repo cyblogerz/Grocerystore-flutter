@@ -1,8 +1,12 @@
+import 'dart:io';
+
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:emart_1/widgets/ProductShort.dart';
 import 'package:emart_1/widgets/SearchBar.dart';
 import 'package:flutter/material.dart';
 
 import 'data.dart';
+import 'models/productModels.dart';
 import 'widgets/Category.dart';
 
 class Home extends StatelessWidget {
@@ -84,15 +88,22 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.25,
-            //get the width of the screen
-            width: MediaQuery.of(context).size.width * 0.9,
-            margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(32),
-              color: Colors.red,
-            ),
+
+          //get the width of the screen
+
+          //Create a product widget for each product
+          //Create a Grid of products
+          GridView.count(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            crossAxisCount: 2,
+            children: ProductData.map(
+              (product) => ProductShort(
+                url: product.img,
+                name: product.name,
+                price: product.price,
+              ),
+            ).toList(),
           ),
         ],
       ),

@@ -8,5 +8,19 @@ class Product {
 
 List<Product> ProductData = [
   Product(
-      name: "Banana", img: "source.unsplash.com/fczCr7MdE7U", price: "`1.99"),
+      name: "Banana",
+      img: "https://source.unsplash.com/fczCr7MdE7U",
+      price: "`1.99"),
+  Product(
+      name: "Apple",
+      img: "https://source.unsplash.com/fczCr7MdE7U",
+      price: "1.99"),
+  Product(
+      name: "Grapes",
+      img: "https://source.unsplash.com/fczCr7MdE7U",
+      price: "1.99"),
+  Product(
+      name: "Grapes",
+      img: "https://source.unsplash.com/fczCr7MdE7U",
+      price: "1.99"),
 ];

@@ -1,4 +1,5 @@
 import 'package:emart_1/home.dart';
+import 'package:emart_1/pages/productPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,8 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Home(),
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/product': (context) => ProductPage(),
+      },
     );
   }
 }

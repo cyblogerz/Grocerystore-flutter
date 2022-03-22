@@ -94,7 +94,7 @@ class Home extends StatelessWidget {
           //Create a product widget for each product
           //Create a Grid of products
           GridView.count(
-            childAspectRatio: 0.7,
+            childAspectRatio: 0.8,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             crossAxisCount: 2,

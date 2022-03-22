@@ -35,6 +35,8 @@ class ProductShort extends StatelessWidget {
           color: Colors.white,
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           //Create a product card
           children: <Widget>[
             Container(
@@ -55,6 +57,21 @@ class ProductShort extends StatelessWidget {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 10.0, bottom: 10.0),
+              child: Align(
+                alignment: Alignment.topRight,
+                child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.green,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    child: Icon(Icons.add)),
               ),
             ),
           ],

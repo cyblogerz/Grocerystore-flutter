@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../pages/productPage.dart';
+
 class ProductShort extends StatelessWidget {
   final String url;
   final String name;
@@ -12,13 +14,25 @@ class ProductShort extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (() => Navigator.pushNamed(context, "/product")),
+      onTap: (() => Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  ProductPage(name: name, url: url, price: price)))),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
         width: MediaQuery.of(context).size.width * 0.4,
         decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 10,
+              offset: Offset(10, 3), // changes position of shadow
+            ),
+          ],
           borderRadius: BorderRadius.circular(20),
-          color: Colors.blueGrey,
+          color: Colors.white,
         ),
         child: Column(
           //Create a product card

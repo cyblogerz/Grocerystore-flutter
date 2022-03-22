@@ -1,5 +1,4 @@
 import 'package:emart_1/home.dart';
-import 'package:emart_1/pages/productPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +14,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => Home(),
-        '/product': (context) => ProductPage(),
       },
     );
   }

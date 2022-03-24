@@ -50,9 +50,11 @@ class Home extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.25,
             margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(32),
-              color: Colors.red,
-            ),
+                borderRadius: BorderRadius.circular(32),
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                        "https://source.unsplash.com/VAb8gjs85a4"))),
           ),
 
           //Create a single child scroll view of a row of categories

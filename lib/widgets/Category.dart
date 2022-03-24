@@ -52,8 +52,8 @@ class Category extends StatelessWidget {
                     width: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      // image: DecorationImage(
-                      //     image: AssetImage(img), fit: BoxFit.cover),
+                      image: DecorationImage(
+                          image: NetworkImage(img), fit: BoxFit.cover),
                     ),
                   ),
                 ),

@@ -5,4 +5,10 @@ class StoryViewModel {
   StoryViewModel({required this.name, required this.img});
 }
 
-List<StoryViewModel> StoryViewData = [];
+List<StoryViewModel> StoryViewData = [
+  StoryViewModel(name: "Vegetables", img: "img"),
+  StoryViewModel(name: "Fruits", img: "img"),
+  StoryViewModel(name: "Fruits", img: "img"),
+  StoryViewModel(name: "Fruits", img: "img"),
+  StoryViewModel(name: "Fruits", img: "img"),
+];

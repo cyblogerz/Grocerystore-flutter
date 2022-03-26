@@ -24,14 +24,14 @@ class Category extends StatelessWidget {
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.pink.withOpacity(0.2),
+                  color: Colors.green.withOpacity(0.2),
                   spreadRadius: 2,
                   blurRadius: 8,
                   offset: Offset(0, 7),
                 ),
               ],
               gradient: LinearGradient(
-                colors: [Color(0xFF9B2282), Color(0xFFEEA863)],
+                colors: [Colors.greenAccent, Colors.green],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),

@@ -46,11 +46,36 @@ class Home extends StatelessWidget {
         children: <Widget>[
           SearchBar(),
           Container(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 20.0, top: 40.0),
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Get up to",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "60% off",
+                      style: TextStyle(
+                          color: Colors.lightGreenAccent,
+                          fontSize: 40.0,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
             //Get the size of screen
-            height: MediaQuery.of(context).size.height * 0.25,
+            height: MediaQuery.of(context).size.height * 0.22,
             margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(32),
+                borderRadius: BorderRadius.circular(22),
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: NetworkImage(

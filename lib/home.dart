@@ -136,7 +136,8 @@ class Home extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.blueAccent,
+        height: 60,
+        backgroundColor: Colors.greenAccent,
         items: <Widget>[
           Icon(Icons.home, size: 30),
           Icon(Icons.list, size: 30),

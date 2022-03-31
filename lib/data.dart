@@ -6,10 +6,9 @@ class StoryViewModel {
 }
 
 List<StoryViewModel> StoryViewData = [
-  StoryViewModel(
-      name: "Vegetables", img: "https://source.unsplash.com/VAb8gjs85a4"),
-  StoryViewModel(name: "Fruits", img: "img"),
-  StoryViewModel(name: "Fruits", img: "img"),
-  StoryViewModel(name: "Fruits", img: "img"),
-  StoryViewModel(name: "Fruits", img: "img"),
+  StoryViewModel(name: "Vegetables", img: "images/veg.jpg"),
+  StoryViewModel(name: "Fruits", img: "images/fruit.jpg"),
+  StoryViewModel(name: "Diary", img: "images/diary.jpg"),
+  StoryViewModel(name: "Seafood", img: "images/seafood.jpg"),
+  StoryViewModel(name: "Bakery", img: "images/bakery.jpg"),
 ];

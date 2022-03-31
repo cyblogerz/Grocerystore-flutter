@@ -47,13 +47,13 @@ class Category extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(1.0),
+                  padding: const EdgeInsets.all(2.0),
                   child: Container(
                     width: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
-                          image: NetworkImage(img), fit: BoxFit.cover),
+                          image: AssetImage(img), fit: BoxFit.cover),
                     ),
                   ),
                 ),

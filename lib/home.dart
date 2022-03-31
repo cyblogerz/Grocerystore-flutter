@@ -108,10 +108,19 @@ class Home extends StatelessWidget {
                 Text(
                   "Popular",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 25,
                   ),
                 ),
-                TextButton(onPressed: () {}, child: Text("See All")),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text("View All"),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.green,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                )
               ],
             ),
           ),

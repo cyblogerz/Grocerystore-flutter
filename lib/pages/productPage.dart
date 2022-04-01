@@ -12,31 +12,22 @@ class ProductPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
-        child: ClipRRect(
-          borderRadius: BorderRadius.all(
-            Radius.circular(32),
-          ),
-          child: BottomAppBar(
-            shape: CircularNotchedRectangle(),
-            color: Colors.green,
-            child: SizedBox(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.08,
-            ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton:
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 35.0),
+          child: FloatingActionButton(
+            backgroundColor: Colors.green,
+            onPressed: () {},
+            child: Icon(Icons.favorite_border),
           ),
         ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(left: 10.0),
-        child: FloatingActionButton(
-          backgroundColor: Colors.green,
-          onPressed: () {},
-          child: Icon(Icons.favorite_border),
-        ),
-      ),
+        FloatingActionButton(
+            backgroundColor: Colors.green,
+            onPressed: () {},
+            child: Icon(Icons.shopping_bag)),
+      ]),
       // extendBodyBehindAppBar: true,
       appBar: AppBar(
         foregroundColor: Colors.red,
@@ -78,6 +69,7 @@ class ProductPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Text("Hello kjsdnkjhekjh efhw ihfw"),
                 ],
               ),
               height: MediaQuery.of(context).size.height * 0.55,

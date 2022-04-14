@@ -12,45 +12,25 @@ class ProductPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.yellow,
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 35.0),
-          child: FloatingActionButton(
-            backgroundColor: Colors.green,
-            onPressed: () {},
-            child: Icon(Icons.favorite_border),
-          ),
-        ),
-        FloatingActionButton(
-            backgroundColor: Colors.green,
-            onPressed: () {},
-            child: Icon(Icons.shopping_bag)),
-      ]),
       // extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        foregroundColor: Colors.red,
-        elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Colors.white,
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
-        ],
-      ),
-      extendBody: true,
-      body: Stack(
+      //Make an appbar with a back button and transparent background
+      //make the stack behind the appbar
+      body: Column(
         children: <Widget>[
-          Container(
-            height: MediaQuery.of(context).size.height * 0.4,
-            decoration: BoxDecoration(
-              image:
-                  DecorationImage(image: NetworkImage(url), fit: BoxFit.cover),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(url), fit: BoxFit.cover),
+              ),
             ),
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
+              // height: MediaQuery.of(context).size.height * 0.2,
               padding: EdgeInsets.all(13),
               child: Column(
                 children: <Widget>[

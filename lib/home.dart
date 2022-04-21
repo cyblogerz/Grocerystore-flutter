@@ -1,10 +1,9 @@
-import 'dart:io';
-
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:emart_1/widgets/ProductShort.dart';
 import 'package:emart_1/widgets/SearchBar.dart';
 import 'package:flutter/material.dart';
-
+//Import flutter svg package
+import 'package:flutter_svg/flutter_svg.dart';
 import 'data.dart';
 import 'models/productModels.dart';
 import 'widgets/Category.dart';
@@ -148,9 +147,10 @@ class Home extends StatelessWidget {
         height: 60,
         backgroundColor: Colors.greenAccent,
         items: <Widget>[
-          Icon(Icons.home, size: 30),
-          Icon(Icons.list, size: 30),
-          Icon(Icons.compare_arrows, size: 30),
+          SvgPicture.asset(
+            "assets/icons/Search Icon.svg",
+            height: 30,
+          ),
         ],
         onTap: (index) {
           //Handle button tap

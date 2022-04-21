@@ -1,33 +1,31 @@
 import 'package:flutter/material.dart';
 
+
+
 class SearchBar extends StatelessWidget {
-  const SearchBar({Key? key}) : super(key: key);
+  const SearchBar({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContex  t context) {
     return Container(
-      padding: EdgeInsets.only(left: 20),
-      height: 50,
+      width: SizeConfig.screenWidth * 0.6,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Colors.grey,
+        color: kSecondaryColor.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(15),
       ),
-      margin: EdgeInsets.all(10),
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: "Search",
-                border: InputBorder.none,
-              ),
-            ),
-          ),
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          ),
-        ],
+      child: TextField(
+        onChanged: (value) => print(value),
+        decoration: InputDecoration(
+            contentPadding: EdgeInsets.symmetric(
+                horizontal: getProportionateScreenWidth(20),
+                vertical: getProportionateScreenWidth(9)),
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            hintText: "Search product",
+            prefixIcon: Icon(Icons.search)),
       ),
     );
   }

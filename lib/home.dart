@@ -143,19 +143,7 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-        height: 60,
-        backgroundColor: Colors.greenAccent,
-        items: <Widget>[
-          SvgPicture.asset(
-            "assets/icons/Search Icon.svg",
-            height: 30,
-          ),
-        ],
-        onTap: (index) {
-          //Handle button tap
-        },
-      ),
+      
     );
   }
 }
